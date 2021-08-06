@@ -630,10 +630,8 @@ button {
 }
 
 .button:hover {
-  background-color: #D05305;
-  -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
 /*-----------------offer-----------------*/
@@ -1207,11 +1205,14 @@ button {
   content: "";
   width: 63px;
   height: 63px;
+  color: #fff;
+  text-align: center;
   border-radius: 50%;
   background-color: #FF6300;
   background-image: url(../img/marker-white.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   position: absolute;
   top: 50%;
   left: -95px;
@@ -1242,10 +1243,8 @@ button {
 }
 
 .price__button:hover {
-  background-color: #D05305;
-  -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
 .price__sheck {
@@ -1302,9 +1301,12 @@ button {
   stroke: #ffffff;
   stroke-width: 7;
   stroke-dasharray: 30 30;
+  rx: 20;
+  ry: 20;
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 
 /*-----------------reviews----------------*/
@@ -1827,6 +1829,22 @@ button {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 210px 15px 310px 15px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1837,7 +1855,8 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 210px 15px 310px 15px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer__title {
@@ -1863,8 +1882,8 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: 0px 0px 5px 0px #fff;
   box-shadow: 0px 0px 5px 0px #fff;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-radius: 20px;
   border: none;
   padding: 0 20px 0 12.3%;
@@ -1909,6 +1928,14 @@ button {
   background-size: cover;
   padding: 32px 140px;
   margin-top: 40px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.footer__submit:hover {
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1890px) {
@@ -2349,10 +2376,10 @@ button {
     left: 50%;
   }
   .price__title {
-    font-size: 66px;
+    font-size: 70px;
   }
   .price__title-bottom {
-    font-size: 72px;
+    font-size: 80px;
     margin-bottom: 40px;
   }
   .price__list.odd {
@@ -2384,10 +2411,6 @@ button {
   .price .price__sheck-item::before {
     width: 40px;
     height: 40px;
-  }
-  .custom-border {
-    stroke-width: 4;
-    stroke-dasharray: 15 15;
   }
   .our-user__title {
     font-size: 100px;
@@ -2776,34 +2799,43 @@ button {
     margin-bottom: 25px;
   }
   .price__list {
-    width: 70%;
+    width: 100%;
     padding: 0;
     margin: 0;
+    padding-left: 135px;
   }
   .price__list.odd {
-    padding-left: 0;
+    padding-left: 135px;
   }
   .price__list-item {
-    font-size: 38px;
+    font-size: 50px;
+    margin-bottom: 35px;
   }
   .price__list-item::before {
-    width: 45px;
-    height: 45px;
-    left: -55px;
+    left: -85px;
+  }
+  .price__button {
+    margin-bottom: 65px;
   }
   .price .price__sheck {
-    width: 75%;
+    width: 90%;
   }
   .price .price__sheck-title {
-    font-size: 38px;
+    font-size: 46px;
+    margin-bottom: 40px;
   }
   .price .price__sheck-item {
-    font-size: 32px;
-    padding-left: 70px;
+    font-size: 49px;
+    padding-left: 30px;
   }
   .price .price__sheck-item::before {
     width: 30px;
     height: 30px;
+    left: -40px;
+  }
+  .custom-border {
+    stroke-width: 4;
+    stroke-dasharray: 15 15;
   }
   .reviews__title {
     font-size: 90px;
@@ -3206,34 +3238,43 @@ button {
     font-size: 58px;
   }
   .price__list {
-    width: 82%;
+    width: 100%;
+    padding-left: 100px;
+  }
+  .price__list.odd {
+    padding-left: 100px;
   }
   .price__list-item {
-    font-size: 34px;
+    font-size: 42px;
+    margin-bottom: 23px;
+  }
+  .price__list-item::before {
+    width: 35px;
+    height: 35px;
+    left: -70px;
   }
   .price__button {
-    font-size: 40px;
-    padding: 30px 75px;
+    padding: 32px 75px;
   }
   .price .price__sheck {
-    width: 80%;
-    padding-top: 35px;
     padding-bottom: 20px;
   }
   .price .price__sheck-title {
-    font-size: 32px;
+    font-size: 36px;
   }
   .price .price__sheck-list {
-    padding-left: 35px;
+    padding-left: 50px;
+    padding-right: 20px;
   }
   .price .price__sheck-item {
-    font-size: 28px;
+    font-size: 38px;
     padding-left: 50px;
     margin-bottom: 18px;
   }
   .price .price__sheck-item::before {
     width: 25px;
     height: 25px;
+    left: -5px;
   }
   .reviews {
     padding-top: 40px;
@@ -3394,6 +3435,35 @@ button {
   .programm .svg-line {
     stroke-width: 3px;
     stroke-dasharray: 15 12;
+  }
+  .price {
+    padding-bottom: 40px;
+  }
+  .price__title {
+    font-size: 46px;
+  }
+  .price__title-bottom {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .price__list-item {
+    font-size: 32px;
+  }
+  .price__list-item::before {
+    left: -60px;
+  }
+  .price__button {
+    font-size: 46px;
+  }
+  .price .price__sheck-title {
+    font-size: 31px;
+  }
+  .price .price__sheck-item {
+    font-size: 32px;
+  }
+  .price .price__sheck-item::before {
+    width: 20px;
+    height: 20px;
   }
   .reviews__title {
     font-size: 70px;
@@ -3639,53 +3709,52 @@ button {
     width: 25px;
     height: 30px;
   }
+  .price__content {
+    margin-bottom: 15px;
+  }
   .price__title {
-    font-size: 41px;
+    font-size: 36px;
+    letter-spacing: 1px;
   }
   .price__title-bottom {
-    font-size: 44px;
-  }
-  .price__list {
-    width: 85%;
-    padding-left: 30px;
-  }
-  .price__list.odd {
-    padding-left: 30px;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
   }
   .price__list-item {
     font-size: 26px;
+    margin-bottom: 15px;
   }
   .price__list-item::before {
-    width: 40px;
-    height: 40px;
-    top: 50%;
+    width: 25px;
+    height: 25px;
     left: -50px;
   }
   .price__button {
-    font-size: 30px;
-    padding: 25px 65px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    padding: 20px 60px;
+    margin-bottom: 25px;
   }
   .price .price__sheck {
-    width: 85%;
-    padding-top: 35px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
   }
   .price .price__sheck-title {
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 20px;
   }
-  .price .price__sheck-list {
-    padding-left: 35px;
-  }
   .price .price__sheck-item {
-    font-size: 24px;
-    padding-left: 70px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    padding-left: 30px;
+    margin-bottom: 15px;
   }
   .price .price__sheck-item::before {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
+  }
+  .custom-border {
+    stroke-width: 2;
+    stroke-dasharray: 10 10;
   }
   .reviews {
     padding-top: 20px;
@@ -3899,43 +3968,14 @@ button {
   .programm__text-content {
     font-size: 18px;
   }
-  .price__title {
-    font-size: 34px;
-  }
-  .price__title-bottom {
-    font-size: 36px;
-  }
-  .price__content {
-    margin-bottom: 15px;
-  }
   .price__list {
-    width: 85%;
-    padding-left: 40px;
+    padding-left: 60px;
   }
   .price__list.odd {
-    padding-left: 40px;
-  }
-  .price__list-item {
-    font-size: 22px;
-  }
-  .price .price__sheck {
-    width: 90%;
-  }
-  .price .price__sheck-title {
-    font-size: 22px;
-    margin-bottom: 20px;
+    padding-left: 60px;
   }
   .price .price__sheck-list {
-    padding-left: 45px;
-  }
-  .price .price__sheck-item {
-    font-size: 20px;
-    padding-left: 70px;
-    margin-bottom: 10px;
-  }
-  .price .price__sheck-item::before {
-    width: 20px;
-    height: 20px;
+    padding-left: 30px;
   }
   .why-with {
     padding-bottom: 30px;
@@ -4097,46 +4137,48 @@ button {
     padding-top: 30px;
   }
   .price__title {
-    font-size: 27px;
-    letter-spacing: 1px;
+    font-size: 28px;
   }
   .price__title-bottom {
-    font-size: 31px;
-    letter-spacing: 1px;
-  }
-  .price__content {
-    margin-bottom: 15px;
+    font-size: 32px;
   }
   .price__list {
-    width: 95%;
-    padding-left: 35px;
+    padding-left: 40px;
   }
   .price__list.odd {
-    padding-left: 35px;
+    padding-left: 40px;
   }
   .price__list-item {
     font-size: 18px;
   }
+  .price__list-item::before {
+    width: 20px;
+    height: 20px;
+    left: -35px;
+  }
   .price__button {
-    font-size: 24px;
-    padding: 15px 45px;
+    font-size: 22px;
+    padding: 10px 42px;
   }
   .price .price__sheck {
     width: 100%;
   }
   .price .price__sheck-title {
-    font-size: 20px;
+    font-size: 19px;
   }
   .price .price__sheck-list {
-    padding-left: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
   .price .price__sheck-item {
     font-size: 18px;
-    padding-left: 50px;
   }
   .price .price__sheck-item::before {
-    width: 20px;
-    height: 20px;
+    left: 0;
+  }
+  .custom-border {
+    stroke-width: 2;
+    stroke-dasharray: 10 10;
   }
   .reviews {
     padding-bottom: 40px;
