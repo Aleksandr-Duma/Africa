@@ -4629,6 +4629,7 @@ button {
 }
 
 .button {
+  display: inline-block;
   font-weight: 300;
   font-size: 42px;
   line-height: 36px;
@@ -5109,6 +5110,7 @@ button {
 }
 
 .svg-line {
+  height: 93.8%;
   position: absolute;
   stroke: #FF6300;
   stroke-width: 10px;
@@ -5218,6 +5220,7 @@ button {
 }
 
 .price__button {
+  display: inline-block;
   font-weight: 400;
   font-size: 82px;
   line-height: 36px;
@@ -6982,6 +6985,7 @@ button {
     right: -15px;
   }
   .svg-line {
+    height: 94.4%;
     stroke-width: 5px;
     stroke-dasharray: 25 13;
   }
@@ -7323,6 +7327,7 @@ button {
     font-size: 24px;
   }
   .programm .svg-line {
+    height: 93.5%;
     stroke-width: 3px;
     stroke-dasharray: 15 12;
   }
@@ -7557,7 +7562,9 @@ button {
     font-size: 30px;
   }
   .support__title-bottom {
-    font-size: 68px;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -5px;
   }
   .support__list-item {
     font-size: 24px;
@@ -7845,6 +7852,7 @@ button {
   .programm__text.odd::after {
     width: 15px;
     height: 15px;
+    top: 5px;
     left: -7.5px;
   }
   .programm__text.even {
@@ -7853,6 +7861,7 @@ button {
   .programm__text.even::after {
     width: 15px;
     height: 15px;
+    top: 5px;
     right: -7.5px;
   }
   .programm__text-title {
@@ -8039,11 +8048,6 @@ button {
     font-size: 28px;
     line-height: 1.3;
   }
-  .support__title-bottom {
-    font-size: 50px;
-    line-height: 1;
-    letter-spacing: -5px;
-  }
   .support__list-item {
     font-size: 16px;
     margin-bottom: 5px;
@@ -8055,19 +8059,19 @@ button {
     left: -21px;
   }
   .programm__row-item {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .programm__img {
     height: 105px;
     border-radius: 10px;
-    -webkit-box-shadow: 6px 8px 0px -4px #FF6300;
-    box-shadow: 6px 8px 0px -4px #FF6300;
+    -webkit-box-shadow: 6px 6px 0px -4px #FF6300;
+    box-shadow: 6px 6px 0px -4px #FF6300;
   }
   .programm__text-title {
-    font-size: 28px;
+    font-size: 22px;
   }
   .programm__text-content {
-    font-size: 16px;
+    font-size: 14px;
   }
   .price {
     padding-top: 30px;
