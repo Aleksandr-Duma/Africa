@@ -103,8 +103,8 @@
 						<h2 class="programm__title">Программа</h2>
 						<div class="programm__row">
 							<div class="programm__row-item odd wow animate__animated animate__fadeInLeft" data-wow-delay=".2s">
-								<div class="programm__img">
-									<button class="button-play"></button>
+								<div class="programm__img youtube-block">
+									<div class="youtube" id="BwBijnqcoQA" style="width: 100%; height: 100%;"></div>
 								</div>
 							</div>
 							<div class="programm__row-item">
@@ -523,6 +523,11 @@
 			<div class="footer__inner">
 			<h3 class="footer__title">Оставьте заявку и мы вам перезвоним!</h3>
 			<form class="footer__form">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Экспедиция в Африку">
+				<input type="hidden" name="admin_email" value="merey.galymuly@gmail.com, dumaweb9@gmail.com">
+				<input type="hidden" name="form_subject" value="Main form">
+				<!-- END Hidden Required Fields -->
 				<input type="text" class="footer__input" placeholder="Введите ваше имя" required="">
 				<input type="tel" class="footer__input" placeholder="Введите ваш телефон" required="">
 				<button class="footer__submit wow animate__animated animate__shakeX" data-wow-delay=".2s" type="submit">Оставить заявку</button>
